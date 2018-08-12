@@ -74,7 +74,7 @@
          :disabled="canAbleToEditDetails">
       </el-input>
       <br/><br/>
-      <div style="float:right;" v-if="mode !== 'view'"><a href="javascript:void(0)" @click="saveEvent(mode)">Save</a></div>
+      <div style="float:right;" v-if="mode !== 'view'"><a href="javascript:void(0)" @click="saveEvent(mode)">{{saveText}}</a></div>
    </div>
 </template>
 
@@ -113,6 +113,9 @@ export default {
     },
     canAbleToEditDetails () {
       return (this.mode === 'view') ? true: false;
+    },
+    saveText () {
+      return this.mode === 'edit' ? 'Update' : 'Save';
     }
   },
   props: {
