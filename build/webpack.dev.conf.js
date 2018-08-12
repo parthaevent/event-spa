@@ -48,10 +48,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     watchOptions: {
       aggregateTimeout: config.dev.aggregateTimeout,
       poll: config.dev.poll
-    },
-    https: {
-      key  : fs.readFileSync(path.join(__dirname, '..', 'ssl/key.pem')),
-      cert : fs.readFileSync(path.join(__dirname, '..', 'ssl/cert.pem'))
     }
   },
   plugins: [
