@@ -213,10 +213,12 @@ export default {
     moveEvents (evt) {
       let newIndex = evt.newIndex;
       let oldIndex = evt.oldIndex;
-      this.$store.dispatch('moveEvents', {
-        newIndex,
-        oldIndex
-      });
+      if (this.eventDetails && this.eventDetails[oldIndex] && this.eventDetails[oldIndex].events) {
+        this.$store.dispatch('moveEvents', {
+          newIndex,
+          oldIndex
+        });
+      }
     }
   }
 }

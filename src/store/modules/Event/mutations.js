@@ -4,6 +4,9 @@ import * as types from './mutation-types';
 import {eventDetails} from './skeleton';
 import cloneDeep from 'lodash/cloneDeep';
 
+/**
+ * The task for this mutations file is to do all the job regarding event add, edit, delete, view, drag-drop
+ */
 const mutations = {
   [types.SET_EVENTS] (state: EventsStateObject, data: Object) {
     state && (state.eventDetails = data.data);

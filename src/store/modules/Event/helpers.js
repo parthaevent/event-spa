@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * get the current week list
+ */
 export function getCurrentWeek () {
   let currentDate = window.moment();
   let weekStart = currentDate.clone().startOf('week');

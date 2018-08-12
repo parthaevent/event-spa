@@ -22,7 +22,8 @@
          }"
          @change="handleChange($event, 'start', 'time')"
          :disabled="canAbleToEditDetails"
-         :reaonly="true"><br/>
+         :reaonly="true"
+         :editable="false"><br/>
       </el-time-select>
       <span v-if="validationError && !startTime" style="color:red">Required</span>
       <br/><br/>
@@ -49,7 +50,8 @@
          }"
          @change="handleChange($event, 'end', 'time')"
          :disabled="canAbleToEditDetails"
-         :reaonly="true">
+         :reaonly="true"
+         :editable="false">
       </el-time-select>
       <span v-if="validationError && !endTime" style="color:red">Required</span>
       <br/><br/>
