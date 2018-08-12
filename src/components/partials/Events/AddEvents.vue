@@ -2,13 +2,13 @@
    <div>
       Start Date:
       <el-date-picker
-        v-model="startDate"
-        type="date"
-        :clearable="false"
-        @change="handleChange($event, 'start', 'date')"
-        :readonly="canAbleToEditDate"
-        :disabled="canAbleToEditDetails"
-        :value-format="format"></el-date-picker>
+         v-model="startDate"
+         type="date"
+         :clearable="false"
+         @change="handleChange($event, 'start', 'date')"
+         :readonly="canAbleToEditDate"
+         :disabled="canAbleToEditDetails"
+         :value-format="format"></el-date-picker>
       <span v-if="validationError && !startDate" style="color:red">Required</span>
       Time:
       <el-time-select
@@ -70,13 +70,13 @@
          :type="type"
          @input="handleChange($event, 'event', 'description')"
          :disabled="canAbleToEditDetails">
-      </el-input> <br/><br/>
+      </el-input>
+      <br/><br/>
       <div style="float:right;" v-if="mode !== 'view'"><a href="javascript:void(0)" @click="saveEvent(mode)">Save</a></div>
    </div>
 </template>
 
 <script>
-
 export default {
   name: 'AddEvents',
   data () {
