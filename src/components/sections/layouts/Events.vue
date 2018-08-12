@@ -7,12 +7,12 @@
       <hr class="month-line" />
       <div class="num-dates">
          <div class="first-week">
-         <list-of-date v-for="(days, index) in currentWeekList"
+         <list-of-event v-for="(days, index) in currentWeekList"
           :key="index"
           :days="days"
           :viewEvent="viewEvent"
           :index="index"
-          :deleteEvent="deleteEvent"></list-of-date>
+          :deleteEvent="deleteEvent"></list-of-event>
          </div>
          <div>
          <draggable
@@ -52,7 +52,7 @@
 <style src="../../../assets/css/events/event.css"></style>
 <script>
 import {getCurrentWeek, validateEventData} from '@/store/modules/Event/helpers';
-const ListOfDate = () => import('@/components/partials/Events/ListOfDate');
+const ListOfEvent = () => import('@/components/partials/Events/ListOfEvent');
 const AddEvents = () => import('@/components/partials/Events/AddEvents');
 const EventForDrag = () => import('@/components/partials/Events/EventForDrag');
 import EventStore from '@/store/modules/Event';
@@ -80,7 +80,7 @@ export default {
     this.eventForDrag = this.getEventList();
   },
   components: {
-    ListOfDate,
+    ListOfEvent,
     AddEvents,
     Draggable,
     EventForDrag

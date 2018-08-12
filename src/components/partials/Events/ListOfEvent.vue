@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'ListOfDate',
+  name: 'ListOfEvent',
   props: {
     days: {required: true, type: Object, default: () => {}},
     viewEvent: {required: true, type: Function},

@@ -57,7 +57,7 @@
       <br/><br/>
       Event Title:
       <el-input
-         :placeholder="placeholder"
+         :placeholder="titlePlaceholder"
          :value="eventTitle"
          :type="type"
          @input="handleChange($event, 'event', 'title')"
@@ -67,7 +67,7 @@
       <br/><br/>
       Event Description:
       <el-input
-         :placeholder="placeholder"
+         :placeholder="descriptionPaleceHolder"
          :value="eventDescription"
          :type="type"
          @input="handleChange($event, 'event', 'description')"
@@ -85,7 +85,8 @@ export default {
     return {
       endTime: this.selectedEndTime,
       format: 'yyyy-MM-dd',
-      placeholder: 'Add Event',
+      titlePlaceholder: 'Event Title',
+      descriptionPaleceHolder: 'Event Description',
       type: 'text',
       value: '',
       startDate: this.selectedStartDate,
