@@ -1,6 +1,6 @@
-# event-spa
+# A event-spa build in vue.js
 
-> Event SPA
+> event-spa build in vue.js
 
 ## Build Setup
 
